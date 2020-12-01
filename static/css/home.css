@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans+Condensed:wght@300&display=swap");
-
+*::-webkit-scrollbar {
+  display: none;
+}
 html,
 body {
   max-width: 100%;
@@ -10,6 +12,97 @@ body {
   background: #5a99d4;
   box-shadow: 0 0 0 0 rgba(#5a99d4, 0.5);
   -webkit-animation: pulse 1.5s infinite;
+}
+.Hiring {
+  background-color: #1d2b33;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  cursor: pointer;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  border-top-right-radius: 50%;
+  padding-bottom: 20px;
+}
+.Hiring__text {
+  flex: 0.5;
+
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 30px;
+  width: 100%;
+}
+.title {
+  font-weight: 800;
+  line-height: normal;
+  color: cyan;
+  margin-left: 10px;
+}
+.desc__text {
+  margin: 20px;
+  font-weight: 700;
+
+  color: white;
+}
+.desc__text > ul {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.Hiring__pic {
+  flex: 0.5;
+  object-fit: contain;
+
+  margin: 10px;
+}
+.Hiring__pic > img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  margin-right: 30px;
+  transition: 0.5s ease-in;
+}
+.skills__needed {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+}
+.reg__button {
+  color: black;
+  background-color: aqua;
+  border-color: aqua;
+  border-radius: 5%;
+  font-weight: 700;
+  padding: 15px;
+  align-items: center;
+  width: 30%;
+  margin-left: 20px;
+  font-size: larger;
+  transition: 0.7s;
+}
+.skills__needed::-webkit-scrollbar {
+  display: none;
+}
+.reg__button:hover {
+  transform: scale(0.8);
+}
+.skills__needed > img {
+  object-fit: contain;
+  height: 100px !important;
+  width: 100px;
+  margin: 20px;
+  transition: 0.3s;
+}
+.skills__needed > img:hover {
+  transform: scale(1.08);
 }
 
 */ #hideMe {
@@ -55,6 +148,9 @@ body {
 /* nav css */
 nav {
   background-color: #fec10b;
+}
+#ca1:hover {
+  transform: scale(1.1);
 }
 .logo {
   width: 170px;
@@ -230,6 +326,24 @@ ul li a {
   }
   #valueText {
   }
+  .reg__button {
+    font-size: small;
+    width: 80%;
+    margin-right: 20px;
+  }
+  #Hiring__line {
+    display: none;
+  }
+  .title {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .Hiring {
+    border-top-right-radius: 0%;
+  }
+  .Hiring__pic {
+    display: none;
+  }
   #jumbotron {
     display: none;
   }
@@ -343,9 +457,28 @@ ul li a {
   #things_we_do_great {
     font-size: 28px;
   }
+  .title {
+    font-size: 35px;
+  }
+
   /* navbarcss */
   .navbar-brand {
     margin-left: 5px;
+  }
+  .reg__button {
+    font-size: 21px;
+  }
+  #Hiring__line {
+    display: none;
+  }
+  .Hiring {
+    border-top-right-radius: 0%;
+  }
+  .Hiring__pic {
+    display: none;
+  }
+  .Hiring__text {
+    flex: 1;
   }
 
   #test_pic1,

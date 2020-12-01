@@ -1,6 +1,5 @@
-{% extends 'base.html' %} {% load static %}
-
-{% block content %} {% load cov_list %}
+{% extends 'base.html' %} {% load static %} {% block content %} {% load cov_list
+%}
 
 <div
   id="carouselExampleInterval"
@@ -10,9 +9,11 @@
   <div class="carousel-inner">
     <div
       class="carousel-item active"
-
       data-interval="3000"
-      style="background-size: 100% 100%; background-image: url('{% static '/images/b3.jpg' %}')"
+      style="
+        background-size: 100% 100%;
+        background-image: url('static/images/b3.jpg');
+      "
     >
       <div style="height: fit-content" id="jumbotron">
         <div
@@ -110,7 +111,11 @@
     <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
       <div class="blockA">
         <div class="card mx-auto shadow-lg" style="width: 18rem" id="ca1">
-          <img src="{{s.serviceImageUrl.url}}" class="card-img-top" alt="..." />
+          <img
+            src="{{s.serviceImageUrl.url}}"
+            class="card-img-top"
+            alt="{{s.name}}"
+          />
           <div class="card-body">
             <h5
               class="card-title text-center"
@@ -129,7 +134,7 @@
               class="mx-auto"
             ></div>
             <ul class="p-0" style="list-style: none">
-              {% for p in s.descriptions|toList %}
+              {% for p in s.descriptions %}
               <li class="points">
                 <p class="text-align small">
                   <i
@@ -168,9 +173,53 @@
   {% endif %} {% endfor %}
 </div>
 
+<div class="Hiring">
+  <div class="Hiring__text">
+    <h1 class="title">Always Hiring Developers</h1>
+    <div
+      id="Hiring__line"
+      class="mx-auto mt-0"
+      style="height: 3px; width: 200px; background-color: rgb(80, 191, 255)"
+    ></div>
+    <div class="description">
+      <h4 class="desc__text">
+        if you have skill in one of the following Programming Technologies
+        <div class="skills__needed">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
+          />
+          <img src="https://www.python.org/static/img/python-logo@2x.png" />
+          <img
+            src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/900px-JavaScript-logo.png"
+          />
+          <img src="https://redux.js.org/img/redux.svg" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Firebase_Logo.svg/768px-Firebase_Logo.svg.png"
+          />
+        </div>
+        or if you are good at
+        <span style="font: 800; color: blanchedalmond"
+          >Graphics design, Photo editing</span
+        >
+        and you can show us your works be sure to register ,we will participate
+        you in a project with
+        <span style="color: aqua; font-weight: 700">25% - 50%</span> of the
+        revenue getting to your pocket
+      </h4>
+      <button class="reg__button">Register 🚀</button>
+    </div>
+  </div>
+  <div class="Hiring__pic">
+    <img src="{% static '/images/hiring.svg'%}" alt="Hiring pic" />
+  </div>
+</div>
+
 <div
   class="cost_back"
-  style="background-image: url('{% static '/images/priceDesc.jpg' %}')"
+  style="background-image: url('static/images/priceDesc.jpg')"
 >
   <div class="container">
     <div class="row">
@@ -220,7 +269,7 @@
     width: 100%;
     height: fit-content;
     margin-bottom: 225px;
-    background-image: url('{% static '/images/commentBack.jpg' %}');
+    background-image: url('{% static /images/hiring.svg %}');
   "
   class="mt-2"
 >
@@ -231,7 +280,7 @@
           <div class="imgBox text-center">
             <img
               id="test_pic1"
-              src="{% static '/images/women.png' %}"
+              src="{% static 'images/women.png' %}"
               style="border-radius: 100%; position: center"
               alt=""
               class="mb-2"
@@ -259,7 +308,7 @@
           <div class="imgBox text-center">
             <img
               id="test_pic2"
-              src="{% static '/images/men.png' %}"
+              src="static/images/men.png'"
               style="border-radius: 100%"
               alt=""
             />

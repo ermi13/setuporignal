@@ -6,6 +6,7 @@
      <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css" />
      <link rel="stylesheet" href="{% static 'css/services.css' %}" type="text/css" />
       <link rel="stylesheet" href="{% static 'css/price.css' %}" type="text/css" />
+      <link rel="stylesheet" href="{% static 'css/portfolios.css' %}" type="text/css" />
 
     <link
       rel="stylesheet"
@@ -189,6 +190,7 @@
           {% url 'home' as Home %}
           {% url 'service' as Service %}
           {% url 'admin' as Admin %}
+          {% url 'portfolios' as Portfolios %}
 
           <li {% if request.path == Home %}  class="nav-item active mr-5" {% else %}
                 class="nav-item mr-5"
@@ -203,8 +205,10 @@
             <a class="nav-link" href="{{Service}}">Services</a>
             <div class="line" style="height: 4px; background-color: rgb(5, 9, 12); width: 80px;"></div>
           </li>
-          <li class="nav-item mr-5">
-            <a class="nav-link" href="#">Portofolios</a>
+          <li {% if request.path == Portfolios %}  class="nav-item active mr-5" {% else %} 
+           class="nav-item mr-5"
+          {% endif %}>
+            <a class="nav-link" href="{{Portfolios}}">Portofolios</a>
             <div class="line" style="height: 4px; background-color: rgb(5, 9, 12); width: 80px;"></div>
 
           </li>
@@ -274,11 +278,10 @@
 
       <!-- Grid column -->
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <img src="{% static 'images/logo 2.jpg' %}" style="width: 130px; height: 130px; border-radius: 15px;" class="footer_logo" alt="setup systems logo">
-        <p class="text mt-2" >our vision is setting you in a position where you use current Technologies & Trends in the software & web development to get your values discoverd by others throughout the world !</p>
-        <hr style="background-color: rgba(255, 166, 0, 0.603);">
-        <h6 class="text-center" style="color: white; font-family: 'Playfair Display', serif;">"let tommorow start with the systems"</h6>
-      </div>
+        <img src="{% static 'images/logo 2.jpg' %}"  style="background-color: white; width: 130px; height: 130px; border-radius: 15px;" class="footer_logo" alt="setup systems logo">
+        <p class="text mt-2" ></p>
+       
+           </div>
       <!-- Grid column -->
 
       <hr class="w-100 clearfix d-md-none">

@@ -1,0 +1,42 @@
+.portfolios__back {
+  background-color: rgb(39, 38, 38);
+  height: 750px;
+  display: flex;
+  align-items: center;
+}
+
+.port__body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.port__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects {
+  margin-left: 15%;
+  background-color: rgb(39, 38, 38);
+  padding-bottom: 100px;
+}
+.projects,
+.port__body,
+.port__header {
+  background-color: rgb(39, 38, 38);
+}
+.port__header h3 {
+  text-align: center;
+  color: cyan;
+  margin: 25px;
+  font-weight: 700;
+}
+.card {
+  transition: 0.5s;
+  margin: 15px;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.1);
+}
