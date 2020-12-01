@@ -21,6 +21,10 @@
   background-color: rgb(39, 38, 38);
   padding-bottom: 100px;
 }
+.project_description {
+  text-align: center;
+  font-weight: 500;
+}
 .projects,
 .port__body,
 .port__header {
