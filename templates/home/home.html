@@ -1,5 +1,7 @@
-{% extends 'base.html' %} {% load cov_list %} {% load static %} {% block content
-%}
+{% extends 'base.html' %} {% load static %}
+<head> </head>
+{% block content %} {% load cov_list %}
+
 <div
   id="carouselExampleInterval"
   class="carousel slide carousel-fade"
@@ -8,11 +10,9 @@
   <div class="carousel-inner">
     <div
       class="carousel-item active"
+      id="b3Back"
       data-interval="3000"
-      style="
-        background-size: 100% 100%;
-        background-image: url('{% static '/images/b3.jpg' %}');
-      "
+      style="background-size: 100% 100%"
     >
       <div style="height: fit-content" id="jumbotron">
         <div
@@ -110,11 +110,7 @@
     <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
       <div class="blockA">
         <div class="card mx-auto shadow-lg" style="width: 18rem" id="ca1">
-          <img
-            src="{{s.serviceImageUrl.url}}"
-            class="card-img-top"
-            alt="{{s.name}}"
-          />
+          <img src="{{s.serviceImageUrl.url}}" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5
               class="card-title text-center"
@@ -215,10 +211,9 @@
     <img src="{% static '/images/hiring.svg'%}" alt="Hiring pic" />
   </div>
 </div>
-
 <div
   class="cost_back"
-  style="background-image: url('{% static '/images/priceDesc.jpg'%}')"
+  style="background-image: url('{% static '/images/priceDesc.jpg' %}')"
 >
   <div class="container">
     <div class="row">
@@ -248,7 +243,7 @@
 
 <div
   class="mx-auto"
-  style="height: 3.1px; width: 70px; margin-top: 150px; background-color: coral"
+  style="height: 3px; width: 70px; margin-top: 150px; background-color: coral"
 ></div>
 
 <h3
@@ -279,7 +274,7 @@
           <div class="imgBox text-center">
             <img
               id="test_pic1"
-              src="{% static 'images/women.png' %}"
+              src="{% static '/images/women.png' %}"
               style="border-radius: 100%; position: center"
               alt=""
               class="mb-2"
@@ -307,7 +302,7 @@
           <div class="imgBox text-center">
             <img
               id="test_pic2"
-              src="{% static 'images/men.png' %}"
+              src="{% static '/images/men.png' %}"
               style="border-radius: 100%"
               alt=""
             />
@@ -328,5 +323,6 @@
       </div>
     </div>
   </div>
-  {% endblock %}
 </div>
+
+{% endblock content %}
