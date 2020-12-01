@@ -12,7 +12,7 @@
       data-interval="3000"
       style="
         background-size: 100% 100%;
-        background-image: url('static/images/b3.jpg');
+        background-image: url('{% static '/images/b3.jpg' %}');
       "
     >
       <div style="height: fit-content" id="jumbotron">
@@ -308,7 +308,7 @@
           <div class="imgBox text-center">
             <img
               id="test_pic2"
-              src="static/images/men.png'"
+              src="{% static 'images/men.png' %}"
               style="border-radius: 100%"
               alt=""
             />
