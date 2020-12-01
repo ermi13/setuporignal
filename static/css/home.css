@@ -19,8 +19,8 @@ body {
   flex-direction: row;
   height: fit-content;
   cursor: pointer;
-  margin-top: 100px;
-  margin-bottom: 400px;
+  margin-top: 210px;
+  margin-bottom: 250px;
   border-top-right-radius: 50%;
   padding-bottom: 20px;
 }
