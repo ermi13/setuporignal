@@ -134,7 +134,7 @@
               class="mx-auto"
             ></div>
             <ul class="p-0" style="list-style: none">
-              {% for p in s.descriptions %}
+              {% for p in s.descriptions|toList %}
               <li class="points">
                 <p class="text-align small">
                   <i
@@ -269,7 +269,7 @@
     width: 100%;
     height: fit-content;
     margin-bottom: 225px;
-    background-image: url('{% static '/images/hiring.svg' %}');
+    background-image: url('{% static '/images/commentBack.jpg' %}');
   "
   class="mt-2"
 >
