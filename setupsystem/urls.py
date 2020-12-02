@@ -24,6 +24,7 @@ urlpatterns = [
     path('services/', include('service.urls')),
     path('price/', include('price.urls'), name='price'),
     path('portfolios/', include('portfolios.urls'), name='portfolios')
+    path('registration_page/', include('register.urls'), name='register')
 ]
 
 if settings.DEBUG:
