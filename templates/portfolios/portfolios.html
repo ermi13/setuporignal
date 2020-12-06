@@ -1,76 +1,88 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
-<div class class="portfolios__back">
-  <div class="port__body">
-    <div class="port__header">
-      <h3 class="project_description">
-        Hello Customers if you want to check our skills from completed
-        projects/clone here we bring you some of our stuffs with the programming
-        techs we used
-      </h3>
+<div class class="portfolios__back" style="background-color: #161c27">
+  <div class="port__body" style="background-color: #161c27">
+    <div class="port__header" style="background-color: #161c27">
+      <h5
+        class="project_description"
+        style="
+          max-width: 100%;
+          text-align: center;
+          color: cyan;
+          margin: 25px;
+          font-weight: 700;
+        "
+      >👋🏽💥🔥 </br>
+        Here are list of projects/clone made by us using the mentioned programming technologies
+      </h5>
     </div>
-    <div class="projects">
+    <center>
+    <div class="projects" style="background-color: #161c27; margin-right: auto; margin-left: auto">
       <div class="container mx-auto">
         <div class="row mx-auto" id="row_">
-          <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-            <div class="card" style="width: 20rem">
+          <div class="col-lg-6 col-md-6 col-sm-12 mt-4" >
+            <div class="card" style="width: 20rem; margin: 0px;">
               <img
                 src="{%static 'images/netflix.jpg' %}"
-                style="height: 30rem"
+                style="height: 10rem"
                 class="card-img-top"
                 alt="netflix clone image"
               />
-              <div class="card-body" style="background-color: black">
+              <div class="card-body" style="background-color:  #161C27">
                 <h5
                   class="project_description"
                   style="color: white; text-align: center"
                 >
-                  Neflix clone made using react js framework
+                <code style="color: rgb(228, 227, 227);"><a style="color: rgb(228, 227, 227);" href="https://netflix-clone-5966a.web.app/"> Neflix clone made using react js framework (Using TMDB API) </a></code>
+                
                 </h5>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-            <div class="card" style="width: 20rem">
+            <div class="card" style="width: 20rem;margin: 0px;">
               <img
                 src="{% static 'images/spotify.jpg' %}"
-                style="height: 30rem"
+                style="height: 10rem"
                 class="card-img-top"
                 alt="..."
               />
-              <div class="card-body" style="background-color: black">
+              <div class="card-body" style="background-color: #161C27">
                 <h5 class="project_description" style="color: white">
-                  Spotify clone made using react js + Redux
+                  <code style="color: rgb(228, 227, 227);">Spotify clone made using react js + Redux and firebase</code>
+                  
                 </h5>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-            <div class="card" style="width: 20rem">
+            <div class="card" style="width: 20rem; margin: 0px;">
               <img
                 src="{%static 'images/instagram.jpg' %}"
-                style="height: 30rem"
+                style="height: 10rem"
                 class="card-img-top"
                 alt="..."
               />
-              <div class="card-body" style="background-color: black">
+              <div class="card-body" style="background-color: #161C27">
                 <h5 class="project_description" style="color: white">
-                  instagram clone made using react clone
+                  <code style="color: rgb(228, 227, 227);"><a href="https://instagram-clone-a55ed.web.app/" style="color: white;">instagram clone made with react js</a></code>
                 </h5>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-            <div class="card" style="width: 20rem">
+            <div class="card" style="width: 20rem; margin: 0px;">
               <img
                 src="{%static 'images/amazon.jpg' %}"
-                style="height: 30rem"
+                style="height: 10rem"
                 class="card-img-top"
                 alt="..."
               />
-              <div class="card-body" style="background-color: black">
+              <div class="card-body" style="background-color:#161C27">
                 <h5 class="project_description" style="color: white">
-                  Full stack Amazon clone made using React + Firebase + REDUX
-                  clone
+                  <code style="color: rgb(228, 227, 227);"> Full stack Amazon clone made using React + Firebase + REDUX
+                    clone</code>
+              
+                 
                 </h5>
               </div>
             </div>
@@ -78,6 +90,7 @@
         </div>
       </div>
     </div>
+  </center>
   </div>
 </div>
 {% endblock %}

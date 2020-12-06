@@ -1,14 +1,17 @@
 {% load static %}
+
 <html lang="en">
  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/Register.css' %}" type="text/css" />
+
      <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css" />
      <link rel="stylesheet" href="{% static 'css/services.css' %}" type="text/css" />
       <link rel="stylesheet" href="{% static 'css/price.css' %}" type="text/css" />
       <link rel="stylesheet" href="{% static 'css/portfolios.css' %}" type="text/css" />
-      <link rel="stylesheet" href="{% static 'css/register.css' %}" type="text/css" />
-
+      <link rel="stylesheet" href="{% static 'css/thanks.css' %}" type="text/css" />
+     
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -270,7 +273,7 @@
 
       {% endblock %}
 
- <footer class="page-footer font-small pt-4" id="footer">
+ <footer style="background-color:#1C2331" class="page-footer font-small pt-4" id="footer">
 
   <!-- Footer Links -->
   <div class=" text-center text-md-left">
@@ -291,20 +294,20 @@
       <!-- Grid column -->
       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="servicesList">
         <h6 class="text-uppercase mb-4 font-weight-bold" style="font-size:14px" id="services">Services</h6>
-        <p class="text-muted">
-          Website Development
+        <p style="cursor: pointer;">
+          <code style="cursor:pointer; color: rgb(230, 230, 230); font-weight: 520;"> Website Development</code>
         </p>
-        <p class="text-muted">
-          Blog Development
+        <p style=" cursor: pointer;" >
+          <code style="cursor:pointer; color: rgb(230, 230, 230); font-weight: 500;"> Blog Development</code>
         </p>
-        <p class="text-muted">
-          Mobile Application
+        <p style="cursor: pointer;" >
+          <code style="cursor:pointer; color: rgb(230, 230, 230); font-weight: 500;"> Mobile Application</code>
         </p>
-        <p class="text-muted">
-         E-Commerce website dev.
+        <p style=" cursor: pointer;" >
+          <code style="cursor:pointer; color: rgb(230, 230, 230); font-weight: 500;"> E-Commerce website dev.</code>
         </p>
-        <p class="text-muted">
-         Crypto currencies
+        <p style=" cursor: pointer;" >
+          <code style="cursor:pointer; color: rgb(230, 230, 230); font-weight: 500;"> Crypto currencies </code>
         </p>
       </div>
       <!-- Grid column -->
@@ -312,21 +315,53 @@
       <hr class="w-100 clearfix d-md-none">
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+  
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="servicesList">
+        <h6 class="text-uppercase mb-4 font-weight-bold" style="font-size:14px" id="services">Contact</h6>
+        <p>
+        <code style="cursor:pointer; color: rgb(230, 230, 230); font-weight: 500;">
+          Ethiopia, Addis Abeba
+        </code>
+      </p>
+        <p style=" cursor: pointer;" class="text-muted">
+          <code style="color: rgb(230, 230, 230); font-weight: 500;"> setupsystems@gmail.com </code>
+         </p>
+        <p style=" cursor: pointer;" class="text-muted">
+         <code style="color: rgb(230, 230, 230); font-weight: 500;"> +251-913386181 </code>
+        </p>
+        <p style="cursor: pointer;" class="text-muted">
+          <code style="color: rgb(230, 230, 230); font-weight: 500;"> +251-993588972 </code>
+        </p>
+        <!-- <p style=" cursor: pointer;" class="text-muted">
+          <code style="color: #6C757D;"> +251-91386181 </code>
+        </p>
+        <p style=" cursor: pointer;" class="text-muted">
+          <code style="color: #6C757D;"> +251-91386181 </code>
+        </p> -->
+      </div>
+     
+    
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3" style="align-content: left;" >
         <h6 class="text-uppercase text-center mb-4 font-weight-bold medium" style="font-size:14px" id="comment">👋 leave us a comment or question 🙏</h6>
         <form class="w-75 mx-auto" action="{% url 'submit' %}" method="post">
          {% csrf_token %}
           <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" name="name" class="form-control"  id="name"  required>
+            <label for="name" style="text-align: left;">Full Name</label>
+            <input type="text" style="color: black; font-weight: 600; font-size: medium;" name="name" class="form-control"  id="name"  required>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control " id="exampleInputEmail1"  required>
+            <input type="email" class="form-control" style="color:black; font-weight: 600; font-size: medium;" id="exampleInputEmail1"  required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
-            <textarea class="form-control" style="font-style: Roboto;" name="comment" id="" cols="" rows="3"  required></textarea>
+            <label for="comment">your comment</label>
+            <textarea class="form-control" style="font-style: Roboto; color: black;" name="comment" id="comment" cols="" rows="2"  required></textarea>
 
 
           </div>
@@ -335,23 +370,6 @@
 
         </form>
       </div>
-
-      <!-- Grid column -->
-      <hr class="w-100 clearfix d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3" id="contact">
-        <h6 class="text-uppercase mb-4 font-weight-bold" style="font-size:14px" >Contacts</h6>
-        <p>
-          <i class="fas fa-home mr-3 text-left"></i>Ethiopia, Addis Abeba</p>
-        <p >
-          <i class="fas fa-envelope mr-3 text-left"></i>setupsystems@gmail.com</p>
-        <p>
-          <i class="fas fa-phone mr-3 text-left"></i> +251913386181</p>
-        <p>
-          <i class="fas fa-print mr-3 text-left"></i> +251912159207</p>
-      </div>
-      <!-- Grid column -->
 
     </div>
     <!-- Footer links -->
@@ -365,9 +383,9 @@
       <div class="col-md-7 col-lg-8">
 
         <!--Copyright-->
-        <p class="text-center text-md-left">© 2020 Copyright:
+        <p class="text-center text-md-left" style="color: white; font-weight: 500; font-size: 13px; padding-left: 10px;">© 2020 Copyright:
 
-            <strong> setup-systems.com</strong>
+            <strong> setup-systems</strong>
 
         </p>
 
@@ -380,22 +398,22 @@
         <!-- Social buttons -->
         <div class="text-center text-md-right">
           <ul class="list-unstyled list-inline">
-            <li class="list-inline-item">
+            <li class="list-inline-item" style="cursor: pointer;">
               <a class="btn-floating btn-sm rgba-white-slight mx-1">
                 <i class="fab fa-facebook-f" id="fb"></i>
               </a>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item" style="cursor: pointer;">
               <a class="btn-floating btn-sm rgba-white-slight mx-1">
                 <i class="fab fa-twitter" id="twitter"></i>
               </a>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item" style="cursor: pointer;">
               <a class="btn-floating btn-sm rgba-white-slight mx-1">
                 <i class="fab fa-google-plus-g" id="googleP"></i>
               </a>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item" style="cursor: pointer;">
               <a class="btn-floating btn-sm rgba-white-slight mx-1">
                 <i class="fab fa-linkedin-in" id="linkedin"></i>
               </a>
@@ -431,16 +449,16 @@
         <p class="text-center text-muted">CEO, Founder of Setup Systems</p>
       </div>
       <div class="col-md-12 col-lg-8 col-sm-12 my-auto p-3" id="descBusi">
-       <p style="color: black; font-family: 'Roboto', sans-serif;" class=""text-muted><b style="font-size: 16px; font-family: Roboto;">Company Name : </b> Setup Systems</p>
+       <p style="color: black; font-family: 'Roboto', sans-serif; text-align: left; max-width: 100%;" class=""><b style="font-size: 16px; font-family: Roboto; text-align: left;">Company Name : </b> Setup Systems</p>
        <hr style="background-color:coral">
-       <p style="color: black; font-family: Roboto;" class=""text-muted><b style="font-size: 16px; font-family: Roboto;">Type of business : </b> Sole Propriotorship</p>
+       <p style="color: black; font-family: Roboto; text-align: left; max-width: 100%;" class=""><b style="font-size: 16px; font-family: Roboto; text-align: left;">Type of business : </b> Sole Propriotorship</p>
        <hr style="background-color:coral">
-       <p style="color: black; font-family: Roboto;" class=""text-muted><b style="font-size: 16px; font-family: Roboto;">inspiration : </b> The inspiration behind setup systems is the
+       <p style="color: black; font-family: Roboto; text-align: left; max-width: 100%;" class=""><b style="font-size: 16px; font-family: Roboto; text-align: left;">inspiration : </b> The inspiration behind setup systems is the
            need for technology ( Software & web technologies in our scope) in order to get intouch with the insanly changing business env't, since use of technology becomes the key factor for a business success. </p>
        <hr style="background-color:coral">
-       <p style="color: black; font-family: Roboto;" class=""text-muted><b style="font-size: 16px; font-family: Roboto;">Our Mission / aim : </b>To create a formal & great Tech representation of what you are doing in your business (either startup or grown business )</p>
+       <p style="color: black; font-family: Roboto; text-align: left; max-width: 100%; font-weight: 500;" class=""><b style="font-size: 16px; font-family: Roboto; ">Our Mission / aim : </b>To create a formal & great Tech representation of what you are doing in your business (either startup or grown business )</p>
        <hr style="background-color:coral">
-       <p style="color: black; font-family: Roboto;"><b style="font-size: 16px; font-family: Roboto;">Vision statement : </b> our vision is pushing you to the position where you use current Technologies & Trends in the software & web development to get your values discovered by others throughout the world !</p>
+       <p style="color: black; font-family: Roboto; text-align: left; max-width: 100%;"><b style="font-size: 16px; font-family: Roboto; text-align: left;">Vision statement : </b> our vision is pushing you to the position where you use current Technologies & Trends in the software & web development to get your values discovered by others throughout the world !</p>
 
       </div>
     </div>

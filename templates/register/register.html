@@ -1,5 +1,28 @@
-{% extends 'base.html' %} {% block content %} {% load static %}
-<div class class="register__back">
-  <h1>welcome to regitration page</h1>
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="register__back" style="background-image: linear-gradient(to bottom, #161C27, #596e97);">
+  <div class="form__container" >
+    <h5 class="form__title">Registration form</h5>
+    <div class="form__fields">
+      <form method="POST" action="" style="font-weight: 600;">
+        {% csrf_token %}
+        {{form}}
+        </div>
+   
+        <input
+          style="
+            background-color: cornflowerblue;
+            color: black;
+            font-weight: 700;
+            margin-top: 20px;
+          "
+          type="submit"
+          name="sub_but"
+          class="form-control"
+          id="sub_but"
+          required
+        />
+      </form>
+    </div>
+  </div>
 </div>
-{% endblock %}
+{% endblock content %}

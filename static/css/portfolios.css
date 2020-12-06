@@ -1,5 +1,4 @@
 .portfolios__back {
-  background-color: rgb(39, 38, 38);
   height: 750px;
   display: flex;
   align-items: center;
@@ -18,7 +17,7 @@
 
 .projects {
   margin-left: 15%;
-  background-color: rgb(39, 38, 38);
+  background-color: #161c27;
   padding-bottom: 100px;
 }
 .project_description {
@@ -28,9 +27,9 @@
 .projects,
 .port__body,
 .port__header {
-  background-color: rgb(39, 38, 38);
+  background-color: #161c27;
 }
-.port__header h3 {
+.port__header h5 {
   text-align: center;
   color: cyan;
   margin: 25px;
@@ -38,10 +37,22 @@
 }
 .card {
   transition: 0.5s;
-  margin: 15px;
+
   cursor: pointer;
   background-color: black;
 }
 .card:hover {
   transform: scale(1.02);
+}
+
+@media (max-width: 426px) {
+  .project_description {
+    font-size: small;
+  }
+}
+
+@media (min-width: 427px) and (max-width: 767px) {
+  .project_description {
+    font-size: small;
+  }
 }

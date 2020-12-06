@@ -8,6 +8,9 @@ body {
   overflow-x: hidden;
   background-color: rgb(250, 240, 202);
 }
+.contacts {
+  color: rgb(165, 164, 164);
+}
 #pulseprt {
   background: #5a99d4;
   box-shadow: 0 0 0 0 rgba(#5a99d4, 0.5);
@@ -61,6 +64,9 @@ body {
 
   margin: 10px;
 }
+.contacts {
+  text-align: left;
+}
 .Hiring__pic > img {
   object-fit: contain;
   height: 100%;
@@ -75,7 +81,7 @@ body {
   margin-bottom: 20px;
   overflow-x: scroll;
 }
-.reg__button {
+#reg__button {
   color: black;
   background-color: aqua;
   border-color: aqua;
@@ -92,7 +98,7 @@ body {
   display: none;
 }
 .reg__button:hover {
-  transform: scale(0.8);
+  transform: scale(0.98);
 }
 .skills__needed > img {
   object-fit: contain;
@@ -131,26 +137,13 @@ body {
     visibility: hidden;
   }
 }
-@-webkit-keyframes pulse {
-  0% {
-    @include transform(scale(0.9));
-  }
-  70% {
-    @include transform(scale(1));
-    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
-  }
-  100% {
-    @include transform(scale(0.9));
-    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
-  }
-}
 
 /* nav css */
 nav {
   background-color: #fec10b;
 }
 #ca1:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .logo {
   width: 170px;
@@ -300,6 +293,9 @@ ul li a {
   height: 130px;
   width: 130px;
 }
+#contact p {
+  text-align: left;
+}
 #comment1 span i,
 #comment2 span i {
   font-size: 35px;
@@ -321,11 +317,22 @@ ul li a {
 .smallJumbo {
   display: none;
 }
+#servicesList > p {
+  text-align: left;
+  transition: 0.3s;
+}
+
+#servicesList > p:hover {
+  color: cyan;
+}
 @media (max-width: 426px) {
   #ideaText {
   }
-  #valueText {
+
+  #servicesList > p {
+    text-align: center;
   }
+
   .reg__button {
     font-size: small;
     width: 80%;
@@ -333,6 +340,15 @@ ul li a {
   }
   #Hiring__line {
     display: none;
+  }
+  #servicesList p {
+    text-align: center;
+  }
+  #contact {
+    align-items: center;
+  }
+  .contacts {
+    text-align: center;
   }
   .title {
     font-size: 25px;
@@ -583,6 +599,9 @@ ul li a {
 @media (min-width: 427px) and (max-width: 767px) {
   #pricingBtn {
     display: none;
+  }
+  #servicesList > p {
+    text-align: center;
   }
   #ideaText {
   }

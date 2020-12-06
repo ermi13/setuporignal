@@ -53,7 +53,10 @@ INSTALLED_APPS = [
     'price',
     'service',
     'portfolios',
-    'register'
+    'register',
+    'multiselectfield',
+    'widget_tweaks',
+    'phone_field'
 ]
 
 MIDDLEWARE = [
