@@ -332,7 +332,9 @@ ul li a {
   #servicesList > p {
     text-align: center;
   }
-
+  #textdiv > p {
+    font-size: small;
+  }
   .reg__button {
     font-size: small;
     width: 80%;
