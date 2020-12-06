@@ -13,9 +13,11 @@ padding-bottom: 100px;">
   padding: 30px;
   border-radius: 7px;
   border: 1px solid rgb(255, 180, 40);" >
-    <h5 class="form__title">Registration form</h5>
+    <h5 class="form__title" style=" font-weight: 600;
+    align-self: center;
+    margin-bottom: 10px;">Registration form</h5>
     <div class="form__fields">
-      <form method="POST" action="" style="font-weight: 600;">
+      <form method="POST" action="" style="font-weight: 600; display: flex; flex-direction: column;">
         {% csrf_token %}
         {{form}}
         </div>
