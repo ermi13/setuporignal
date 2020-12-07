@@ -8,7 +8,7 @@ class Service(models.Model):
     name = models.CharField(max_length=100)
     descriptions = models.TextField()
     newFeatures = models.TextField(null=True)
-    serviceImageUrl = models.FileField()
+    serviceImageUrl = models.FileField(blank=True)
 
     def __str__(self):
         return self.name

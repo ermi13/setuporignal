@@ -115,7 +115,43 @@
     <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
       <div class="blockA">
         <div class="card mx-auto shadow-lg" style="width: 18rem" id="ca1">
-          <img src="{{s.serviceImageUrl.url}}" class="card-img-top" alt="..." />
+          {% if s.name == "Website Development"%}
+          <img
+            src="{% static '/images/website.jpg'%}"
+            class="card-img-top"
+            alt="..."
+          />
+          {% endif %} {% if s.name == "Blog Development"%}
+          <img
+            src="{% static '/images/blog.jpg'%}"
+            class="card-img-top"
+            alt="..."
+          />
+          {% endif %} {% if s.name == "Mobile App Development"%}
+          <img
+            src="{% static '/images/mobile.jpg'%}"
+            class="card-img-top"
+            alt="..."
+          />
+          {% endif %} {% if s.name == "Automation"%}
+          <img
+            src="{% static '/images/Automation.jpg'%}"
+            class="card-img-top"
+            alt="..."
+          />
+          {% endif %} {% if s.name == "E-Commerce Website Development"%}
+          <img
+            src="{% static '/images/ecommerce.png'%}"
+            class="card-img-top"
+            alt="..."
+          />
+          {% endif %} {% if s.name == "Crypto currencies & Credit card"%}
+          <img
+            src="{% static '/images/crypto.jpg'%}"
+            class="card-img-top"
+            alt="..."
+          />
+          {% endif %}
           <div class="card-body">
             <h5
               class="card-title text-center"
