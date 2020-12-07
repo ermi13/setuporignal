@@ -643,7 +643,9 @@ ul li a {
   transform: scale(1.05);
   color: white;
 }
-
+#box:hover p {
+  color: white;
+}
 #box p {
   transition: 0.5s;
 }
