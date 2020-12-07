@@ -29,7 +29,6 @@ body {
 }
 .Hiring__text {
   flex: 0.5;
-
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -639,13 +638,10 @@ ul li a {
 }
 
 #box:hover {
-  background-color: #c2c0be;
+  background-color: #ff3547;
   cursor: pointer;
-}
-
-#box2:hover {
-  background-color: #c2c0be;
-  cursor: pointer;
+  transform: scale(1.05);
+  color: white;
 }
 
 #box p {
